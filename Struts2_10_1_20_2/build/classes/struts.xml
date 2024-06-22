@@ -1,0 +1,29 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+
+    <package name="default" extends="struts-default">
+    
+    <interceptors>
+    <interceptor name="l" class="max.LoginIntercepter"/>
+    </interceptors>
+    
+        <action name="lgn" class="max.LoginAction">
+        
+         <interceptor-ref name="defaultStack"/>
+     
+       <interceptor-ref name="l"/>
+        
+        <result name="s">/A.jsp</result>
+        <result name="e">E.jsp</result>
+        </action>
+        
+        
+        
+       
+    </package>
+</struts>
